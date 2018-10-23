@@ -1,0 +1,5 @@
+com.google.javascript.jscomp.JsMessageExtractor@141
+com.google.javascript.jscomp.JsMessageExtractor@139
+com.google.javascript.jscomp.JsMessageExtractor@138
+com.google.javascript.jscomp.JsMessageExtractor@137
+com.google.javascript.jscomp.JsMessageExtractor@136

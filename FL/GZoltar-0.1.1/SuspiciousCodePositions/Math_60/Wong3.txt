@@ -1,0 +1,3 @@
+org.apache.commons.math.util.ContinuedFraction@186
+org.apache.commons.math.util.ContinuedFraction@164
+org.apache.commons.math.util.ContinuedFraction@163

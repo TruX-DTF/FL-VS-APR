@@ -1,0 +1,12 @@
+com.google.javascript.jscomp.ProcessCommonJSModules@121
+com.google.javascript.jscomp.ProcessCommonJSModules@54
+com.google.javascript.jscomp.ProcessCommonJSModules@55
+com.google.javascript.jscomp.ProcessCommonJSModules@58
+com.google.javascript.jscomp.ProcessCommonJSModules@59
+com.google.javascript.jscomp.ProcessCommonJSModules@60
+com.google.javascript.jscomp.ProcessCommonJSModules@62
+com.google.javascript.jscomp.ProcessCommonJSModules@63
+com.google.javascript.jscomp.ProcessCommonJSModules@72
+com.google.javascript.jscomp.ProcessCommonJSModules@89
+com.google.javascript.jscomp.ProcessCommonJSModules@120
+com.google.javascript.jscomp.ProcessCommonJSModules@124

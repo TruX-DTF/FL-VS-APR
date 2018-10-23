@@ -1,0 +1,4 @@
+org.jfree.data.Range@365
+org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset@175
+org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset@174
+org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset@173
