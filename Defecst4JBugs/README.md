@@ -3,7 +3,7 @@ Prepare 395 bugs in Defects4J -- version 1.2.0.
 
 I. Requirement
 --------------
- - [Defects4J](https://github.com/rjust/defects4j)
+ - [Defects4J - version 1.2.0](https://github.com/rjust/defects4j)
  
 II. How to prepare bugs?
 ------------------------
