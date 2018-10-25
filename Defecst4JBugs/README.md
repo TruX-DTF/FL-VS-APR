@@ -13,8 +13,8 @@ II. How to prepare bugs?
 2. Make a directory to store the 395 bugs.
    - `dir=<D4J_Bugs_OutputPath> # Store the buggy projects.`
 
-2. Checkout the buggy versions of 395 bugs into distinct directories.
+3. Checkout the buggy versions of 395 bugs into distinct directories.
    - `./checkoutProjects.sh`
    
-3. Compile the 395 bugs.
+4. Compile the 395 bugs.
    - `./compileProjects.sh`

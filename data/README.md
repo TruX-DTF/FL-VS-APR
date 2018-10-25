@@ -17,7 +17,7 @@ III. Buggy Files
 The Java code file(s) of each buggy project contain the buggy code that makes the program fail to pass some test cases.
 For example, the buggy file of buggy project `Chart_1` is 
 
-    'source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java'
+    source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java.
 
 
 IV. Bug Positions 
@@ -27,7 +27,7 @@ The bug positions are formated as '`ProjectName_buggyID@buggy_file@line_number`'
 For example, the bug position of buggy project `Chart_1` is line 1797 in file `source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java`.
 Thus the bug position is formatted as 
 
-    'Chart_1@source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java@1797'.
+    Chart_1@source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java@1797.
 
 Bug positions of all Defects4J bugs are saved in [`BugPositions.txt`](https://github.com/flvsapr/FL-VS-APR/blob/master/data/BugPositions.txt).
  
