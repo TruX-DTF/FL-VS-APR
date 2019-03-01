@@ -21,6 +21,8 @@
 			<groupId>edu.lu.uni.serval</groupId>
 			<artifactId>JavaCodeParser</artifactId>
 			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/JavaCodeParser-1.0.jar</systemPath>
 		</dependency>
 	
 		<!-- GZoltar jar in local lib. -->
