@@ -8,8 +8,8 @@ I. Requirement
 II. Failed Test Cases
 ---------------------
 Failed test cases are obtained by running command `defects4j test` for each buggy project, and are saved in distinct file formatted as `ProjectName_buggyID.txt`. 
-For example, the failed test cases of buggy project `Chart_1` are saved in [FailedTestCases/Chart_1.txt](https://github.com/flvsapr/FL-VS-APR/blob/master/data/FailedTestCases/Chart_1.txt). 
-Note that, before running command `defects4j test` for each buggy project, please prepare bugs with this [instructions](https://github.com/flvsapr/FL-VS-APR/tree/master/Defecst4JBugs).
+For example, the failed test cases of buggy project `Chart_1` are saved in [FailedTestCases/Chart_1.txt](https://github.com/SerVal-DTF/FL-VS-APR/blob/master/data/FailedTestCases/Chart_1.txt). 
+Note that, before running command `defects4j test` for each buggy project, please prepare bugs with this [instructions](https://github.com/SerVal-DTF/FL-VS-APR/tree/master/Defecst4JBugs).
  
  
 III. Buggy Files
@@ -29,5 +29,5 @@ Thus the bug position is formatted as
 
     Chart_1@source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java@1797.
 
-Bug positions of all Defects4J bugs are saved in [`BugPositions.txt`](https://github.com/flvsapr/FL-VS-APR/blob/master/data/BugPositions.txt).
+Bug positions of all Defects4J bugs are saved in [`BugPositions.txt`](https://github.com/SerVal-DTF/FL-VS-APR/blob/master/data/BugPositions.txt).
  

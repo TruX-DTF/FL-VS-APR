@@ -23,7 +23,8 @@ III. Fault Localization (FL) in APR
 -----------------------------------
 In APR systems, fault localization (FL) is not only the first step but also seriously affects the performance of the systems. 
 Given a buggy program (with its passing and failing test cases), an FL tool is leveraged during the FL step to identify the suspicious buggy code locations.
-The [granularity](https://github.com/flvsapr/FL-VS-APR/blob/master/FL/GZoltar-0.1.1/README.md#granularity-fl) of suspicious locations can be a file, method, or line. Ideally, the location should be both precise and accurate.
+The [granularity](https://github.com/SerVal-DTF/FL-VS-APR/blob/master/FaultLocalization/GZoltar-0.1.1/README.md#granularity-fl
+) of suspicious locations can be a file, method, or line. Ideally, the location should be both precise and accurate.
 If the precision is low (e.g., the granularity is broad such as file), the patch generation step needs to explore a large space of candidate patches.
 If the accuracy is low (e.g., the FL step provides a wrong fault location), the subsequent step generates patches for the non-faulty program entity.
 

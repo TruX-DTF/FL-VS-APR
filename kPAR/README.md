@@ -13,7 +13,7 @@ I. Requirement
 --------------------
 
 ### A. Set up the Environment
-1. Set up Defects4J bugs with this [instructions](https://github.com/flvsapr/FL-VS-APR/tree/master/Defecst4JBugs).
+1. Set up Defects4J bugs with this [instructions](https://github.com/SerVal-DTF/FL-VS-APR/tree/master/Defecst4JBugs).
 
 ### B. Run kPAR
 Coming soon... 

@@ -14,4 +14,3 @@ II. Set up the Environment
 
 2. Localize suspicious code positions with GZoltar 0.1.1/1.6.0.
 
-Coming soon...

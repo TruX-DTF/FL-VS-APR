@@ -11,7 +11,7 @@ Results
 All of them are formated as `packageName.className@lineNumber` and saved in a file named `Ranking_Metric_Name.txt`.
 For example, the package name, class name and line number of bug `Chart_1` are `org.jfree.chart.renderer.category`, `AbstractCategoryItemRenderer` and `1797`, respectively. 
 This position is formated as `org.jfree.chart.renderer.category.AbstractCategoryItemRenderer@1797`.
-Eventually, all suspicious code statements in buggy project `Chart_1` located with GZoltar-0.1.1 and the ranking metric Ochiai are saved in the file [Chart_1/Ochiai.txt](https://github.com/flvsapr/FL-VS-APR/blob/master/FL/GZoltar-0.1.1/SuspiciousCodePositions/Chart_1/Ochiai.txt). The same as others. 
+Eventually, all suspicious code statements in buggy project `Chart_1` located with GZoltar-0.1.1 and the ranking metric Ochiai are saved in the file [Chart_1/Ochiai.txt](https://github.com/SerVal-DTF/FL-VS-APR/blob/master/FaultLocalization/GZoltar-0.1.1/SuspiciousCodePositions/Chart_1/Ochiai.txt). The same as others. 
 Note that, If the suspicious value of a statement is 0.0, this statement is not contained in the list of suspicious code statements. 
 
 2. Granularity of fault locality.(#granularity-fl)
@@ -26,4 +26,4 @@ Note that, If the suspicious value of a statement is 0.0, this statement is not 
 > At a given granularity level, if the bug can be localized, the associated position of the correct fault locality within the ranked list of suspicious code locations is recorded as the bug position.
 Since a bug position could span over several lines, methods, and even over several files, the bug is considered to be correctly localized by an FL tool as long as any reported suspicious code line can match the ground truth bug locations with the corresponding granularity.
 If the bug cannot be localized, the bug position is presented as `-`.
-The localized bug positions are saved in folder [BugPostions](https://github.com/flvsapr/FL-VS-APR/tree/master/FL/GZoltar-0.1.1/BugPositions).
+The localized bug positions are saved in folder [BugPostions](https://github.com/SerVal-DTF/FL-VS-APR/blob/master/FaultLocalization/GZoltar-0.1.1/BugPositions).
