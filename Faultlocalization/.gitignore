@@ -4,13 +4,4 @@
 .project
 .settings
 target
-logs
-bugPositions
-*Test.java
-*TestFL.java
-*TestFL2.java
-*TestFL3.java
-.suspicious/
-.temp/
-log/
 logs/
