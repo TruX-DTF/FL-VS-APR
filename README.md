@@ -51,14 +51,14 @@ The blow table lists the fault localization techniques integrated into state-of-
 | **jGenProg**   |   GZoltar  |   0.1.1   |   Ochiai   |      line      |                 ∅                 |
 | **jKali**      |   GZoltar  |   0.1.1   |   Ochiai   |      line      |                 ∅                 |
 | **jMutRepair** |   GZoltar  |   0.1.1   |   Ochiai   |      line      |                 ∅                 |
-| **HDRepair**   |     --     |     -     |     -      |      line      |       Fault method is known       |
+| **HDRepair**   |     ?      |     ?     |     ?      |      line      |       Fault method is known       |
 | **Nopol**      |   GZoltar  |   0.0.10  |   Ochiai   |      line      |                 ∅                 |
 | **ACS**        |   GZoltar  |   0.1.1   |   Ochiai   |      line      |         Predicate switching       |
-| **ELIXIR**     |     --     |     -     |   Ochiai   |      line      |                 ∅                 |
-| **JAID**       |     --     |     -     |      -     |      line      |                 ∅                 |
-| **ssFix**      |   GZoltar  |   0.1.1   |      -     |      line      | Statements in crashed stack trace |
-| **CapGen**     |   GZoltar  |   0.1.1   |   Ochiai   |      line      |                 ∅                 |
-| **SketchFix**  |     --     |     -     |   Ochiai   |      line      |                 ∅                 |
+| **ELIXIR**     |     ?      |     ?     |   Ochiai   |      line      |                 ?                 |
+| **JAID**       |     ?      |     ?     |     ?      |      line      |                 ?                 |
+| **ssFix**      |   GZoltar  |   0.1.1   |     ?      |      line      | Statements in crashed stack trace |
+| **CapGen**     |   GZoltar  |   0.1.1   |   Ochiai   |      line      |                 ?                 |
+| **SketchFix**  |     ?      |     ?     |   Ochiai   |      line      |                 ?                 |
 | **FixMiner**   |   GZoltar  |   0.1.1   |   Ochiai   |      line      |                 ∅                 |
 | **LSRepair**   |   GZoltar  |   0.1.1   |   Ochiai   |     Method     |                 ∅                 |
 | **SimFix**     |   GZoltar  |   1.6.0   |   Ochiai   |      line      |      Test case purification       |
