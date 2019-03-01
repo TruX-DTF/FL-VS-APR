@@ -1,4 +1,0 @@
-com.google.javascript.jscomp.LightweightMessageFormatter@97
-com.google.javascript.jscomp.LightweightMessageFormatter@92
-com.google.javascript.jscomp.LightweightMessageFormatter@91
-com.google.javascript.jscomp.LightweightMessageFormatter@90

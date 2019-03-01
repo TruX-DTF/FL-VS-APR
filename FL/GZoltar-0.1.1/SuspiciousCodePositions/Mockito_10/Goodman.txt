@@ -1,5 +1,0 @@
-org.mockito.exceptions.Reporter@761
-org.mockito.exceptions.Reporter@760
-org.mockito.internal.util.MockCreationValidator@63
-org.mockito.internal.util.reflection.Constructors@17
-org.mockito.internal.util.reflection.Constructors@16

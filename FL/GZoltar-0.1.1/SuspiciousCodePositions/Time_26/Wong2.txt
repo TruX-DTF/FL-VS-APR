@@ -1,5 +1,0 @@
-org.joda.time.tz.ZoneInfoProvider@162
-org.joda.time.DateTime@1662
-org.joda.time.DateTime@522
-org.joda.time.DateTime@519
-org.joda.time.DateTime@518

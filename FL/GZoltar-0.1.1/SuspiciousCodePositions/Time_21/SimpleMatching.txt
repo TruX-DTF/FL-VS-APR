@@ -1,4 +1,0 @@
-org.joda.time.DateTimeZone@755
-org.joda.time.Duration@166
-org.joda.time.Duration@163
-org.joda.time.tz.DefaultNameProvider@77

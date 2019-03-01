@@ -1,3 +1,0 @@
-org.joda.time.IllegalFieldValueException@314
-org.joda.time.base.BaseSingleFieldPeriod@105
-org.joda.time.base.BaseSingleFieldPeriod@104

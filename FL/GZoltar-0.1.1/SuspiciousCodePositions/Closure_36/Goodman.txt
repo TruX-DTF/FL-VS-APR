@@ -1,5 +1,0 @@
-com.google.javascript.rhino.Node@132
-com.google.javascript.rhino.Node@131
-com.google.javascript.jscomp.NodeUtil@3097
-com.google.javascript.jscomp.OptimizeParameters@356
-com.google.javascript.rhino.Token@182

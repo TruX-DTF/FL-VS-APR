@@ -1,4 +1,0 @@
-com.google.javascript.jscomp.testing.TestErrorReporter@62
-com.google.javascript.jscomp.parsing.JsDocInfoParser@1761
-com.google.javascript.jscomp.parsing.JsDocInfoParser@887
-com.google.javascript.jscomp.parsing.JsDocInfoParser@886

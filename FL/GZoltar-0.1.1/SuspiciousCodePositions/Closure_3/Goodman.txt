@@ -1,3 +1,0 @@
-com.google.javascript.rhino.Token@232
-com.google.javascript.jscomp.MaybeReachingVariableUse@163
-com.google.javascript.rhino.Node@131

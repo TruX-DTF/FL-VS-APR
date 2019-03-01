@@ -1,7 +1,0 @@
-org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet@120
-org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet@118
-org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet@109
-org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet@107
-org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet@94
-org.apache.commons.math3.geometry.euclidean.oned.OrientedPoint@74
-org.apache.commons.math3.geometry.euclidean.oned.Vector1D@128

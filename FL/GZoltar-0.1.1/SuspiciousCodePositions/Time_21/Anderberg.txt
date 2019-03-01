@@ -1,6 +1,0 @@
-org.joda.time.tz.DefaultNameProvider@85
-org.joda.time.tz.DefaultNameProvider@63
-org.joda.time.tz.DefaultNameProvider@62
-org.joda.time.tz.DefaultNameProvider@58
-org.joda.time.tz.DefaultNameProvider@57
-org.joda.time.tz.DefaultNameProvider@76

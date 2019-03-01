@@ -1,5 +1,0 @@
-org.joda.time.DateTimeUtils@88
-org.joda.time.DateTimeZone@1058
-org.joda.time.DateTimeZone@1057
-org.joda.time.PeriodType@690
-org.joda.time.Period@1631

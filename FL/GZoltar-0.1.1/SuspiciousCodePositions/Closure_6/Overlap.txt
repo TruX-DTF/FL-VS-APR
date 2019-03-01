@@ -1,9 +1,0 @@
-com.google.javascript.rhino.jstype.JSTypeRegistry@839
-com.google.javascript.rhino.jstype.EnumType@145
-com.google.javascript.jscomp.TypeValidator@534
-com.google.javascript.jscomp.TypeValidator@577
-com.google.javascript.jscomp.TypeValidator@536
-com.google.javascript.jscomp.TypeValidator@533
-com.google.javascript.jscomp.TypeValidator@532
-com.google.javascript.jscomp.TypeValidator@386
-com.google.javascript.jscomp.TypeValidator@366

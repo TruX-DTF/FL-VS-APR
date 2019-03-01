@@ -1,6 +1,0 @@
-com.google.javascript.rhino.Node@1440
-com.google.javascript.rhino.Node@1411
-com.google.javascript.rhino.Node@1427
-com.google.javascript.jscomp.RemoveUnusedVars@402
-com.google.javascript.jscomp.RemoveUnusedVars@398
-com.google.javascript.jscomp.RemoveUnusedVars@397

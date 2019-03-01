@@ -1,5 +1,0 @@
-com.google.javascript.jscomp.ProcessCommonJSModules@121
-com.google.javascript.jscomp.ProcessCommonJSModules@124
-com.google.javascript.jscomp.ProcessCommonJSModules@120
-com.google.javascript.jscomp.ProcessCommonJSModules@89
-com.google.javascript.jscomp.ProcessCommonJSModules@72

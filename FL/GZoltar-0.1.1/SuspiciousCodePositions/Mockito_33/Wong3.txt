@@ -1,2 +1,0 @@
-org.mockito.exceptions.verification.WantedButNotInvoked@20
-org.mockito.internal.util.RemoveFirstLine@14

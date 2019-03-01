@@ -1,9 +1,0 @@
-org.joda.time.IllegalFieldValueException@314
-org.joda.time.LocalDate@1763
-org.joda.time.LocalDate@1708
-org.joda.time.LocalDate@1663
-org.joda.time.LocalDate@1531
-org.joda.time.LocalDate@1500
-org.joda.time.chrono.JulianChronology@81
-org.joda.time.chrono.JulianChronology@80
-org.joda.time.field.SkipDateTimeField@94

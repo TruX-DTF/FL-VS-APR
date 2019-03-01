@@ -1,2 +1,0 @@
-org.jfree.data.time.TimeSeries@880
-org.jfree.data.time.TimeSeries@857

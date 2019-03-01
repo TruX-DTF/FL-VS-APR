@@ -1,3 +1,0 @@
-org.joda.time.field.ZeroIsMaxDateTimeField@178
-org.joda.time.field.ZeroIsMaxDateTimeField@138
-org.joda.time.field.ZeroIsMaxDateTimeField@111

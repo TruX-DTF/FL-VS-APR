@@ -1,7 +1,0 @@
-org.apache.commons.math.stat.descriptive.SummaryStatistics@647
-org.apache.commons.math.stat.descriptive.SummaryStatistics@637
-org.apache.commons.math.stat.descriptive.SummaryStatistics@636
-org.apache.commons.math.stat.descriptive.SummaryStatistics@635
-org.apache.commons.math.stat.descriptive.SummaryStatistics@579
-org.apache.commons.math.stat.descriptive.SummaryStatistics@578
-org.apache.commons.math.stat.descriptive.SummaryStatistics@577

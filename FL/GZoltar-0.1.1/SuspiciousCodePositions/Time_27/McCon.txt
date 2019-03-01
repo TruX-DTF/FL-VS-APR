@@ -1,4 +1,0 @@
-org.joda.time.format.PeriodFormatter@324
-org.joda.time.DateTimeZone@159
-org.joda.time.DateTimeZone@132
-org.joda.time.DateTimeZone@131

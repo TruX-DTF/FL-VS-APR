@@ -1,3 +1,0 @@
-org.apache.commons.lang.text.StrBuilder@1675
-org.apache.commons.lang.text.StrBuilder@1674
-org.apache.commons.lang.text.StrBuilder@1673

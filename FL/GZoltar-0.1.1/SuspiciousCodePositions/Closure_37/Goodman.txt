@@ -1,5 +1,0 @@
-com.google.javascript.jscomp.Compiler@642
-com.google.javascript.jscomp.Compiler@565
-com.google.javascript.jscomp.Compiler@564
-com.google.javascript.jscomp.Compiler@563
-com.google.javascript.jscomp.parsing.TypeSafeDispatcher@280

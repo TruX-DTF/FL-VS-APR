@@ -1,2 +1,0 @@
-org.apache.commons.math.geometry.euclidean.threed.Rotation@481
-org.apache.commons.math.geometry.euclidean.threed.Vector3D@224

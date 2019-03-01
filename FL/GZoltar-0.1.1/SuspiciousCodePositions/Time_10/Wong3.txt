@@ -1,6 +1,0 @@
-org.joda.time.DateTimeUtils@86
-org.joda.time.IllegalFieldValueException@314
-org.joda.time.DateTimeZone@1033
-org.joda.time.DateTimeZone@1032
-org.joda.time.base.BaseSingleFieldPeriod@105
-org.joda.time.base.BaseSingleFieldPeriod@104

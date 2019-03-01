@@ -1,9 +1,0 @@
-com.google.javascript.rhino.jstype.RecordType@182
-com.google.javascript.rhino.jstype.RecordType@180
-com.google.javascript.rhino.jstype.RecordType@177
-com.google.javascript.rhino.jstype.RecordType@176
-com.google.javascript.rhino.jstype.RecordType@175
-com.google.javascript.rhino.jstype.RecordType@173
-com.google.javascript.rhino.jstype.RecordType@171
-com.google.javascript.rhino.jstype.RecordTypeBuilder@86
-com.google.javascript.rhino.jstype.RecordType@154

@@ -1,2 +1,0 @@
-org.apache.commons.math.optimization.linear.SimplexTableau@291
-org.apache.commons.math.optimization.linear.SimplexSolver@168

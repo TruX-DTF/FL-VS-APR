@@ -1,0 +1,11 @@
+org.jfree.data.xy.XYIntervalSeriesCollection@147
+org.jfree.data.xy.XYIntervalSeriesCollection@116
+org.jfree.data.xy.XYIntervalSeriesCollection@113
+org.jfree.data.xy.XYIntervalSeriesCollection@230
+org.jfree.data.xy.XYIntervalSeriesCollection@229
+org.jfree.data.xy.XYIntervalSeriesCollection@216
+org.jfree.data.xy.XYIntervalSeriesCollection@215
+org.jfree.data.xy.XYIntervalSeriesCollection@188
+org.jfree.data.xy.XYIntervalSeriesCollection@187
+org.jfree.data.xy.XYIntervalSeriesCollection@174
+org.jfree.data.xy.XYIntervalSeriesCollection@173

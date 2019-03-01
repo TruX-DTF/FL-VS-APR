@@ -1,4 +1,0 @@
-org.apache.commons.math3.optimization.linear.AbstractLinearOptimizer@128
-org.apache.commons.math3.exception.util.ExceptionContext@137
-org.apache.commons.math3.exception.MathIllegalStateException@86
-org.apache.commons.math3.exception.MathIllegalStateException@80

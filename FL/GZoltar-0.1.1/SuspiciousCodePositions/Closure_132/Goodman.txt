@@ -1,2 +1,0 @@
-com.google.javascript.rhino.Token@221
-com.google.javascript.rhino.Token@248

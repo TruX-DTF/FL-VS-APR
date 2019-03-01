@@ -1,5 +1,0 @@
-com.google.javascript.rhino.Node@1440
-com.google.javascript.rhino.Node@1411
-com.google.javascript.rhino.Token@231
-com.google.javascript.rhino.Node@127
-com.google.javascript.rhino.Node@126

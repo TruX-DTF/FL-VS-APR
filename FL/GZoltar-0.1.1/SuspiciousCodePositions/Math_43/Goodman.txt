@@ -1,2 +1,0 @@
-org.apache.commons.math.stat.descriptive.SummaryStatistics@647
-org.apache.commons.math.stat.descriptive.SummaryStatistics@643

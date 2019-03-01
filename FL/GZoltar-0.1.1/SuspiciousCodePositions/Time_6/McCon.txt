@@ -1,3 +1,0 @@
-org.joda.time.IllegalFieldValueException@314
-org.joda.time.chrono.JulianChronology@81
-org.joda.time.chrono.JulianChronology@80

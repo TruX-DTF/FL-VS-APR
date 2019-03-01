@@ -1,2 +1,0 @@
-org.joda.time.PeriodType@690
-org.joda.time.Period@1631

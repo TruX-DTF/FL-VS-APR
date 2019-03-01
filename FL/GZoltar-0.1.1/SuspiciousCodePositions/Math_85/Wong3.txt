@@ -1,4 +1,0 @@
-org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils@199
-org.apache.commons.math.distribution.AbstractContinuousDistribution@104
-org.apache.commons.math.distribution.AbstractContinuousDistribution@100
-org.apache.commons.math.distribution.AbstractContinuousDistribution@97

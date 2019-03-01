@@ -1,4 +1,0 @@
-org.apache.commons.math.stat.inference.ChiSquareTestImpl@98
-org.apache.commons.math.stat.inference.ChiSquareTestImpl@97
-org.apache.commons.math.stat.inference.TestUtils@278
-org.apache.commons.math.stat.inference.TestUtils@303

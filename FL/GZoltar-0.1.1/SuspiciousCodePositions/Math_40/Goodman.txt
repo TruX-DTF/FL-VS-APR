@@ -1,3 +1,0 @@
-org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver@394
-org.apache.commons.math.analysis.solvers.BracketingNthOrderBrentSolver@393
-org.apache.commons.math.exception.MathIllegalStateException@80

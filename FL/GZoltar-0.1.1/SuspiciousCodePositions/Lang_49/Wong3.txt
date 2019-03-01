@@ -1,4 +1,0 @@
-org.apache.commons.lang.math.Fraction@470
-org.apache.commons.lang.math.Fraction@468
-org.apache.commons.lang.math.Fraction@467
-org.apache.commons.lang.math.Fraction@466
