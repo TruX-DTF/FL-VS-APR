@@ -19,6 +19,9 @@ public class FL {
 
 	private static Logger log = LoggerFactory.getLogger(FL.class);
 	
+	public DataPreparer dp = null;
+	public List<SuspiciousCode> suspStmts;
+	
 	/**
 	 * Input: 
 	 * 		1. Defects4J project path. e.g., ../Defects4JData/
@@ -58,8 +61,10 @@ public class FL {
 
 		System.out.println(buggyProject);
 		
-		DataPreparer dp = new DataPreparer(path);
-		dp.prepareData(buggyProject);
+		if (dp == null) {
+			dp = new DataPreparer(path);
+			dp.prepareData(buggyProject);
+		}
 		if (!dp.validPaths) return;
 
 		GZoltarFaultLoclaization gzfl = new GZoltarFaultLoclaization();
@@ -101,6 +106,59 @@ public class FL {
 		gzfl.failingTestCases.clear();
 		gzfl.gzoltarTestResults.clear();
 		
+	}
+	
+	public void locateSuspiciousCode(String path, String buggyProject, String outputPath, String metricStr) {
+		if (!buggyProject.contains("_")) {
+			System.out.println("Main: cannot recognize project name \"" + buggyProject + "\"");
+			return;
+		}
+
+		String[] elements = buggyProject.split("_");
+		try {
+			Integer.valueOf(elements[1]);
+		} catch (NumberFormatException e) {
+			System.out.println("Main: cannot recognize project name \"" + buggyProject + "\"");
+			return;
+		}
+
+		System.out.println(buggyProject);
+		
+		if (dp == null) {
+			dp = new DataPreparer(path);
+			dp.prepareData(buggyProject);
+		}
+		if (!dp.validPaths) return;
+
+		GZoltarFaultLoclaization gzfl = new GZoltarFaultLoclaization();
+		gzfl.threshold = 0.0;
+		gzfl.maxSuspCandidates = -1;
+		gzfl.srcPath = path + buggyProject + PathUtils.getSrcPath(buggyProject).get(2);
+		
+		try {
+			gzfl.localizeSuspiciousCodeWithGZoltar(dp.classPaths, checkNotNull(Arrays.asList("")), dp.testCases);
+		} catch (NullPointerException e) {
+			log.error(buggyProject + "\n" + e.getMessage());
+			e.printStackTrace();
+			return;
+		}
+		
+		System.out.println(metricStr);
+		Metric metric = new Metrics().generateMetric(metricStr);
+		gzfl.sortSuspiciousCode(metric);
+		
+		suspStmts = new ArrayList<SuspiciousCode>(gzfl.candidates.size());
+		suspStmts.addAll(gzfl.candidates);
+        
+		StringBuilder builder = new StringBuilder();
+		for (int index = 0, size = suspStmts.size(); index < size; index ++) {
+			SuspiciousCode candidate = suspStmts.get(index);
+			String className = candidate.getClassName();
+			int lineNumber = candidate.lineNumber;
+			builder.append(className).append("@").append(lineNumber)
+				.append("@").append(candidate.getSuspiciousValueString()).append("\n");
+		}
+		FileHelper.outputToFile(outputPath + buggyProject + "/" + metricStr + ".txt", builder, false);
 	}
 
 }
