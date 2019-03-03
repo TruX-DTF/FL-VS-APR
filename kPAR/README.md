@@ -7,16 +7,16 @@ I. Requirement
  - Java 1.7
  - [Defects4J](https://github.com/rjust/defects4j)
  - GZoltar 0.1.1
- - kPAR (Coming soon)
+ - kPAR
  
  II. How to run kPAR
 --------------------
 
 ### A. Set up the Environment
-1. Set up Defects4J bugs with this [instructions](https://github.com/SerVal-DTF/FL-VS-APR/tree/master/Defecst4JBugs).
+Set up Defects4J bugs with this [instructions](https://github.com/SerVal-DTF/FL-VS-APR/tree/master/Defecst4JBugs).
 
 ### B. Run kPAR
-Coming soon... 
+See the parameter setting of `main` method in `edu.lu.uni.serval.main.Main.java` or `edu.lu.uni.serval.main.Main_Pos.java`.
 
 
 III. Results 
