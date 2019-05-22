@@ -38,9 +38,7 @@ The ranking metric is applied to calculate suspiciousness scores for program ent
 
 The below table provides quantitative details on the localizability of bugs at different levels of fault locality granularity (i.e., file, method and line). Experiments are performed with two distinct versions (0.1.1 and 1.6.0) of GZoltar and the different ranking metrics.
 
-![localized bugs.\label{lBugs}](./doc/figure/positions.png)
-
-
+<img src="./doc/figure/positions.png" width="500">
 
 IV. Integration of FL Tools in APR Systems
 ------------------------------------------
