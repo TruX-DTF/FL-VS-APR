@@ -11,22 +11,22 @@ import edu.lu.uni.serval.utils.FileHelper;
 import edu.lu.uni.serval.utils.SuspiciousPosition;
 
 /**
- * Automated Program Repair Tool: PAR.
+ * Automated Program Repair Tool: kPAR.
  * 
- * Fix bugs with PAR when the bug positions at the file level is provided.
+ * Fix bugs with PAR when the bug positions at the line level is provided.
  * 
  * @author kui.liu
  *
  */
-public class File_ParFixer extends ParFixer {
+public class Line_kParFixer extends kParFixer {
 	
-	private static Logger log = LoggerFactory.getLogger(File_ParFixer.class);
+	private static Logger log = LoggerFactory.getLogger(Line_kParFixer.class);
 	
-	public File_ParFixer(String path, String projectName, int bugId, String defects4jPath) {
+	public Line_kParFixer(String path, String projectName, int bugId, String defects4jPath) {
 		super(path, projectName, bugId, defects4jPath);
 	}
 	
-	public File_ParFixer(String path, String metric, String projectName, int bugId, String defects4jPath) {
+	public Line_kParFixer(String path, String metric, String projectName, int bugId, String defects4jPath) {
 		super(path, metric, projectName, bugId, defects4jPath);
 	}
 
@@ -36,16 +36,12 @@ public class File_ParFixer extends ParFixer {
 		if (!dp.validPaths) return;
 		
 		// Read suspicious positions.
-		List<String> buggyFileList = readKnownFileLevelBugPositions();
-		List<SuspiciousPosition> suspiciousCodeList = readSuspiciousCodeFromFile(metric, buggyProject, dp);
+		List<SuspiciousPosition> suspiciousCodeList = readKnownBugPositionsFromFile();
 		if (suspiciousCodeList == null) return;
 		
 		List<SuspCodeNode> triedSuspNode = new ArrayList<>();
-		log.info("=======FILE_PARFIXER: Start to fix suspicious code======");
+		log.info("=======LINE_kPARFixer: Start to fix suspicious code======");
 		for (SuspiciousPosition suspiciousCode : suspiciousCodeList) {
-			
-			if (!buggyFileList.contains(suspiciousCode.classPath)) continue;
-			
 			SuspCodeNode scn = parseSuspiciousCode(suspiciousCode);
 			if (scn == null) continue;
 
@@ -57,13 +53,13 @@ public class File_ParFixer extends ParFixer {
 	        
 			if (minErrorTest == 0) break;
         }
-		log.info("=======FILE_PARFIXER: Finish off fixing======");
+		log.info("=======LINE_kPARFixer: Finish off fixing======");
 		
 		FileHelper.deleteDirectory(Configuration.TEMP_FILES_PATH + this.dataType + "/" + this.buggyProject);
 	}
 
-	private List<String> readKnownFileLevelBugPositions() {
-		List<String> buggyFileList = new ArrayList<>();
+	private List<SuspiciousPosition> readKnownBugPositionsFromFile() {
+		List<SuspiciousPosition> suspiciousCodeList = new ArrayList<>();
 		
 		String[] posArray = FileHelper.readFile(Configuration.knownBugPositions).split("\n");
 		Boolean isBuggyProject = null;
@@ -73,17 +69,31 @@ public class File_ParFixer extends ParFixer {
 					isBuggyProject = true;
 					
 					String[] elements = pos.split("@");
+	            	String[] lineStrArr = elements[2].split(",");
 	            	String classPath = elements[1];
 	            	String shortSrcPath = dp.srcPath.substring(dp.srcPath.indexOf(this.buggyProject) + this.buggyProject.length() + 1);
-	            	classPath = classPath.substring(shortSrcPath.length(), classPath.length() - 5).replace("/", ".");
+	            	classPath = classPath.substring(shortSrcPath.length(), classPath.length() - 5);
 
-	            	if (!buggyFileList.contains(classPath)) {
-	            		buggyFileList.add(classPath);
-	            	}
+	            	for (String lineStr : lineStrArr) {
+	    				if (lineStr.contains("-")) {
+	    					String[] subPos = lineStr.split("-");
+	    					for (int line = Integer.valueOf(subPos[0]), endLine = Integer.valueOf(subPos[1]); line <= endLine; line ++) {
+	    						SuspiciousPosition sp = new SuspiciousPosition();
+	    		            	sp.classPath = classPath;
+	    		            	sp.lineNumber = line;
+	    		            	suspiciousCodeList.add(sp);
+	    					}
+	    				} else {
+	    					SuspiciousPosition sp = new SuspiciousPosition();
+	    	            	sp.classPath = classPath;
+	    	            	sp.lineNumber = Integer.valueOf(lineStr);
+	    	            	suspiciousCodeList.add(sp);
+	    				}
+	    			}
 				} else if (isBuggyProject!= null && isBuggyProject) isBuggyProject = false;
 			} else if (!isBuggyProject) break;
 		}
-		return buggyFileList;
+		return suspiciousCodeList;
 	}
 
 }

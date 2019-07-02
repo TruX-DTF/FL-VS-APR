@@ -3,20 +3,20 @@ package edu.lu.uni.serval.main;
 import java.io.File;
 
 import edu.lu.uni.serval.bug.fixer.AbstractFixer;
-import edu.lu.uni.serval.bug.fixer.kParFixer;
+import edu.lu.uni.serval.bug.fixer.kParFixer_NFL;
 import edu.lu.uni.serval.config.Configuration;
 
 /**
- * Fix bugs with Fault Localization results.
+ * Fix bugs with Fault Localization results reported with another version of GZoltar.
  * 
  * @author kui.liu
  *
  */
-public class Main {
+public class Main_NFL {
 	
 	public static void main(String[] args) {
-		if (args.length != 6) {
-			System.out.println("Arguments: <Failed_Test_Cases_File_Path> <Suspicious_Code_Positions_File_Path> <Buggy_Project_Path> <defects4j_Path> <Project_Name> <FL_Metric>");
+		if (args.length != 5) {
+			System.out.println("Arguments: <Failed_Test_Cases_File_Path> <Suspicious_Code_Positions_File_Path> <Buggy_Project_Path> <defects4j_Path> <Project_Name>");
 			System.exit(0);
 		}
 		Configuration.failedTestCasesFilePath = args[0];
@@ -24,8 +24,7 @@ public class Main {
 		String buggyProjectsPath = args[2];// "../Defects4JData/"
 		String defects4jPath = args[3]; // "../defects4j/"
 		String projectName = args[4]; // "Chart_1"
-		Configuration.faultLocalizationMetric = args[5];
-		Configuration.outputPath += "FL/";
+		Configuration.outputPath += "NFL/";
 		System.out.println(projectName);
 		fixBug(buggyProjectsPath, defects4jPath, projectName);
 	}
@@ -44,7 +43,7 @@ public class Main {
 			return;
 		}
 		
-		AbstractFixer fixer = new kParFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
+		AbstractFixer fixer = new kParFixer_NFL(buggyProjectsPath, projectName, bugId, defects4jPath);
 		fixer.metric = Configuration.faultLocalizationMetric;
 		fixer.dataType = dataType;
 		fixer.suspCodePosFile = new File(suspiciousFileStr);

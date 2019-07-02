@@ -59,6 +59,7 @@ public abstract class AbstractFixer implements IFixer {
 	public int fixedStatus = 0;
 	public String dataType = "";
 	protected int patchId = 0;
+	protected int compareablePatch = 0;
 //	private TimeLine timeLine;
 	
 	public AbstractFixer(String path, String projectName, int bugId, String defects4jPath) {
@@ -241,6 +242,7 @@ public abstract class AbstractFixer implements IFixer {
 				}
 			}
 			log.debug("Finish of compiling.");
+			compareablePatch ++;
 			
 			log.debug("Test previously failed test cases.");
 			try {
@@ -291,12 +293,12 @@ public abstract class AbstractFixer implements IFixer {
 					log.info("Succeeded to fix the bug " + buggyProject + "====================");
 					String patchStr = TestUtils.readPatch(this.fullBuggyProjectPath);
 					if (patchStr == null || !patchStr.startsWith("diff")) {
-						FileHelper.outputToFile(Configuration.outputPath + "FixedBugs/" + buggyProject + "/Patch_" + patchId + ".txt",
+						FileHelper.outputToFile(Configuration.outputPath + "FixedBugs/" + buggyProject + "/Patch_" + patchId + "_" + compareablePatch + ".txt",
 								"//**********************************************************\n//" + scn.suspiciousJavaFile + " ------ " + scn.buggyLine
 								+ "\n//**********************************************************\n"
 								+ "===Buggy Code===\n" + buggyCode + "\n\n===Patch Code===\n" + patchCode, false);
 					} else {
-						FileHelper.outputToFile(Configuration.outputPath + "FixedBugs/" + buggyProject + "/Patch_" + patchId + ".txt", patchStr, false);
+						FileHelper.outputToFile(Configuration.outputPath + "FixedBugs/" + buggyProject + "/Patch_" + patchId + "_" + compareablePatch + ".txt", patchStr, false);
 					}
 					this.minErrorTest = 0;
 					break;
@@ -307,12 +309,12 @@ public abstract class AbstractFixer implements IFixer {
 						log.info("Partially Succeeded to fix the bug " + buggyProject + "====================");
 						String patchStr = TestUtils.readPatch(this.fullBuggyProjectPath);
 						if (patchStr == null || !patchStr.startsWith("diff")) {
-							FileHelper.outputToFile(Configuration.outputPath + "PartiallyFixedBugs/" + buggyProject + "/Patch_" + patchId + ".txt",
+							FileHelper.outputToFile(Configuration.outputPath + "PartiallyFixedBugs/" + buggyProject + "/Patch_" + patchId + "_" + compareablePatch + ".txt",
 									"//**********************************************************\n//" + scn.suspiciousJavaFile + " ------ " + scn.buggyLine
 									+ "\n//**********************************************************\n"
 									+ "===Buggy Code===\n" + buggyCode + "\n\n===Patch Code===\n" + patchCode, false);
 						} else {
-							FileHelper.outputToFile(Configuration.outputPath + "PartiallyFixedBugs/" + buggyProject + "/Patch_" + patchId + ".txt", patchStr, false);
+							FileHelper.outputToFile(Configuration.outputPath + "PartiallyFixedBugs/" + buggyProject + "/Patch_" + patchId + "_" + compareablePatch + ".txt", patchStr, false);
 						}
 					}
 				}

@@ -1,9 +1,9 @@
 package edu.lu.uni.serval.main;
 
 import edu.lu.uni.serval.bug.fixer.AbstractFixer;
-import edu.lu.uni.serval.bug.fixer.File_ParFixer;
-import edu.lu.uni.serval.bug.fixer.Line_ParFixer;
-import edu.lu.uni.serval.bug.fixer.Method_ParFixer;
+import edu.lu.uni.serval.bug.fixer.File_kParFixer;
+import edu.lu.uni.serval.bug.fixer.Line_kParFixer;
+import edu.lu.uni.serval.bug.fixer.Method_kParFixer;
 import edu.lu.uni.serval.config.Configuration;
 
 /**
@@ -52,7 +52,7 @@ public class Main_Pos {
 	}
 
 	public static void fixBug(String buggyProjectsPath, String defects4jPath, String buggyProjectName) {
-		String dataType = "PAR";
+		String dataType = "kPAR";
 		String[] elements = buggyProjectName.split("_");
 		String projectName = elements[0];
 		int bugId;
@@ -66,13 +66,13 @@ public class Main_Pos {
 		AbstractFixer fixer = null;
 		switch (granularity) {
 		case Line:
-			fixer = new Line_ParFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
+			fixer = new Line_kParFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
 			break;
 		case Method:
-			fixer = new Method_ParFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
+			fixer = new Method_kParFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
 			break;
 		case File:
-			fixer = new File_ParFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
+			fixer = new File_kParFixer(buggyProjectsPath, projectName, bugId, defects4jPath);
 			break;
 		default:
 			break;

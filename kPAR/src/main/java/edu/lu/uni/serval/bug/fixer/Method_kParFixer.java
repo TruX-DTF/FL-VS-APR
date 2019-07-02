@@ -14,22 +14,22 @@ import edu.lu.uni.serval.utils.SuspiciousCodeParser.BuggyMethod;
 import edu.lu.uni.serval.utils.SuspiciousPosition;
 
 /**
- * Automated Program Repair Tool: PAR.
+ * Automated Program Repair Tool: kPAR.
  * 
  * Fix bugs with PAR when the bug positions at the method level is provided.
  * 
  * @author kui.liu
  *
  */
-public class Method_ParFixer extends ParFixer {
+public class Method_kParFixer extends kParFixer {
 	
-	private static Logger log = LoggerFactory.getLogger(Method_ParFixer.class);
+	private static Logger log = LoggerFactory.getLogger(Method_kParFixer.class);
 	
-	public Method_ParFixer(String path, String projectName, int bugId, String defects4jPath) {
+	public Method_kParFixer(String path, String projectName, int bugId, String defects4jPath) {
 		super(path, projectName, bugId, defects4jPath);
 	}
 	
-	public Method_ParFixer(String path, String metric, String projectName, int bugId, String defects4jPath) {
+	public Method_kParFixer(String path, String metric, String projectName, int bugId, String defects4jPath) {
 		super(path, metric, projectName, bugId, defects4jPath);
 	}
 
@@ -46,7 +46,7 @@ public class Method_ParFixer extends ParFixer {
 		if (suspiciousCodeList == null) return;
 		
 		List<SuspCodeNode> triedSuspNode = new ArrayList<>();
-		log.info("=======METHOD_PARFIXER: Start to fix suspicious code======");
+		log.info("=======METHOD_kPARFixer: Start to fix suspicious code======");
 		for (SuspiciousPosition suspiciousCode : suspiciousCodeList) {
 			
 			if (!isContained(buggyMethodList, suspiciousCode.classPath, suspiciousCode.lineNumber)) continue;
@@ -62,7 +62,7 @@ public class Method_ParFixer extends ParFixer {
 	        
 			if (minErrorTest == 0) break;
         }
-		log.info("=======METHOD_PARFIXER: Finish off fixing======");
+		log.info("=======METHOD_kPARFixer: Finish off fixing======");
 		
 		FileHelper.deleteDirectory(Configuration.TEMP_FILES_PATH + this.dataType + "/" + this.buggyProject);
 	}

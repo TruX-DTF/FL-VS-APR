@@ -25,7 +25,7 @@ import edu.lu.uni.serval.utils.FileHelper;
 import edu.lu.uni.serval.utils.SuspiciousPosition;
 
 /**
- * Automated Program Repair Tool: PAR.
+ * Automated Program Repair Tool: kPAR.
  * 
  * All fix templates are introduced in paper "Automatic patch generation learned from human-written patches".
  * https://dl.acm.org/citation.cfm?id=2486893
@@ -33,15 +33,15 @@ import edu.lu.uni.serval.utils.SuspiciousPosition;
  * @author kui.liu
  *
  */
-public class ParFixer extends AbstractFixer {
+public class kParFixer extends AbstractFixer {
 	
-	private static Logger log = LoggerFactory.getLogger(ParFixer.class);
+	private static Logger log = LoggerFactory.getLogger(kParFixer.class);
 	
-	public ParFixer(String path, String projectName, int bugId, String defects4jPath) {
+	public kParFixer(String path, String projectName, int bugId, String defects4jPath) {
 		super(path, projectName, bugId, defects4jPath);
 	}
 	
-	public ParFixer(String path, String metric, String projectName, int bugId, String defects4jPath) {
+	public kParFixer(String path, String metric, String projectName, int bugId, String defects4jPath) {
 		super(path, metric, projectName, bugId, defects4jPath);
 	}
 
@@ -55,7 +55,7 @@ public class ParFixer extends AbstractFixer {
 		if (suspiciousCodeList == null) return;
 		
 		List<SuspCodeNode> triedSuspNode = new ArrayList<>();
-		log.info("=======PARFIXER: Start to fix suspicious code======");
+		log.info("=======kPARFixer: Start to fix suspicious code======");
 		for (SuspiciousPosition suspiciousCode : suspiciousCodeList) {
 			SuspCodeNode scn = parseSuspiciousCode(suspiciousCode);
 			if (scn == null) continue;
@@ -68,7 +68,7 @@ public class ParFixer extends AbstractFixer {
 	        
 			if (minErrorTest == 0) break;
         }
-		log.info("=======PARFIXER: Finish off fixing======");
+		log.info("=======kPARFixer: Finish off fixing======");
 		
 		FileHelper.deleteDirectory(Configuration.TEMP_FILES_PATH + this.dataType + "/" + this.buggyProject);
 	}
