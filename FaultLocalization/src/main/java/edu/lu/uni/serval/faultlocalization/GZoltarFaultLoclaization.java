@@ -47,7 +47,7 @@ public class GZoltarFaultLoclaization {
 	public List<String> failingTestCases = new ArrayList<String>();
 	public ArrayList<Statement> selectedSuspiciousStatements = new ArrayList<>();
 	
-	public void localizeSuspiciousCodeWithGZoltar(final URL[] clazzPaths, Collection<String> packageNames, String... testClasses) throws NullPointerException {
+	public void localizeSuspiciousCodeWithGZoltar(String bugDir, final URL[] clazzPaths, Collection<String> packageNames, String... testClasses) throws NullPointerException {
 		ArrayList<String> classPaths = new ArrayList<String>();
 		StringBuilder b = new StringBuilder();
         for (URL url : clazzPaths) {// Dependencies. lib
@@ -65,7 +65,13 @@ public class GZoltarFaultLoclaization {
         b.setLength(0);
         
         try {
-			GZoltar gzoltar = new GZoltar(System.getProperty("user.dir"));
+        	// Dale:
+        	// the original code: new GZoltar(System.getProperty("user.dir"))
+        	// will lead to unexpected failed test cases when localizing Time buggy projects, 
+        	// (e.g., this leads to the failure of org.joda.time.TestSerialization#testSerializedMutableDateTime when localizing Time_7.
+        	// The failing detail includes: java.io.FileNotFoundException: src/test/resources/MutableDateTime.dat (No such file or directory)
+        	// Therefore, the GZoltar working dir should be the bugDir, rather than the current FL project dir.
+			GZoltar gzoltar = new GZoltar(bugDir);
 			
 			if (classPaths != null && !classPaths.isEmpty()) {
 				gzoltar.getClasspaths().addAll(classPaths);
@@ -277,6 +283,10 @@ public class GZoltarFaultLoclaization {
 //                } else {
 //                	totalFailedTestCases ++;
 //                }
+				
+				// to print the failed tests
+				System.out.println("The failed test case:" + tr.getName() + "  " + tr.wasSuccessful());
+				
 				if (!failingTestCases.contains(testName)) failingTestCases.add(testName);
 			}
 		}
