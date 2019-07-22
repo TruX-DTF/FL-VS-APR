@@ -24,7 +24,7 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/JavaCodeParser-1.0.jar</systemPath>
 		</dependency>
-	
+        
 		<!-- GZoltar jar in local lib. -->
 		<dependency>
 			<groupId>gzoltar</groupId>
@@ -32,7 +32,7 @@
 			<version>0.1.1</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/com.gzoltar-0.1.1-jdk7.jar</systemPath>
-	   </dependency>
+	   </dependency> 
 		
 		<dependency>
 			<groupId>com.google.guava</groupId>
@@ -111,6 +111,7 @@
 			<version>4.12</version>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -119,9 +120,43 @@
 				<version>3.2</version>
 				<configuration>
 					<source>1.7</source>
-					<target>1.7</target>
+					<target>1.7</target>				
 				</configuration>
 			</plugin>
+            
+			<!-- dale -->
+			<plugin>
+			  <groupId>org.springframework.boot</groupId>
+			  <artifactId>spring-boot-maven-plugin</artifactId>
+			  <configuration>
+			    <includeSystemScope>true</includeSystemScope>
+			  </configuration>
+			</plugin>
+		
+			<plugin>
+			    <artifactId>maven-assembly-plugin</artifactId>
+			    <version>2.4</version>
+			    <configuration>
+			        <descriptorRefs>
+			            <descriptorRef>jar-with-dependencies</descriptorRef>
+			        </descriptorRefs>
+			        <archive>
+			            <manifest>
+			                <mainClass>edu.lu.uni.serval.main.Main</mainClass>
+			            </manifest>
+			        </archive>
+			    </configuration>
+			    <executions>
+			        <execution>
+			            <id>make-assembly</id>
+			            <phase>package</phase>
+			            <goals>
+			                <goal>single</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
+
 		</plugins>
 	</build>
 </project>
