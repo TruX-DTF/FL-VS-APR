@@ -36,7 +36,9 @@ public class FL {
 	public static void main(String[] args) {
 		String outputPath = "GZoltar-0.1.1/" + Configuration.SUSPICIOUS_POSITIONS_FILE_APTH;
 		String path = Configuration.BUGGY_PROJECTS_PATH;
-		String projectName = "Chart_11";
+		
+		// To run FL for Time_7.
+		String projectName = "Time_7";
 		
 		log.info(projectName);
 		
@@ -73,7 +75,7 @@ public class FL {
 		gzfl.srcPath = path + buggyProject + PathUtils.getSrcPath(buggyProject).get(2);
 		
 		try {
-			gzfl.localizeSuspiciousCodeWithGZoltar(dp.classPaths, checkNotNull(Arrays.asList("")), dp.testCases);
+			gzfl.localizeSuspiciousCodeWithGZoltar(dp.bugDir, dp.classPaths, checkNotNull(Arrays.asList("")), dp.testCases);
 		} catch (NullPointerException e) {
 			for (String metricStr : Configuration.METRICS_0_1_1) {
 				FileHelper.outputToFile(outputPath + buggyProject + "/" + metricStr + ".txt", "", false);
@@ -136,7 +138,7 @@ public class FL {
 		gzfl.srcPath = path + buggyProject + PathUtils.getSrcPath(buggyProject).get(2);
 		
 		try {
-			gzfl.localizeSuspiciousCodeWithGZoltar(dp.classPaths, checkNotNull(Arrays.asList("")), dp.testCases);
+			gzfl.localizeSuspiciousCodeWithGZoltar(dp.bugDir, dp.classPaths, checkNotNull(Arrays.asList("")), dp.testCases);
 		} catch (NullPointerException e) {
 			log.error(buggyProject + "\n" + e.getMessage());
 			e.printStackTrace();
