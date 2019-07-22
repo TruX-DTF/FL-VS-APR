@@ -20,6 +20,8 @@ public class DataPreparer {
 
     private String buggyProjectParentPath;
     
+    public String bugDir; // the working directory for GZoltar.
+    
     public String classPath;
     public String srcPath;
     public String testClassPath;
@@ -62,6 +64,8 @@ public class DataPreparer {
 		srcPath = projectDir + buggyProject + paths.get(2);
 		testSrcPath = projectDir + buggyProject + paths.get(3);
 
+		bugDir = projectDir + buggyProject; // set bugDir.
+		
 		List<File> libPackages = new ArrayList<>();// dependencies.
 		if (new File(projectDir + buggyProject + "/lib/").exists()) {
 			libPaths.add(projectDir + buggyProject + "/lib/");
